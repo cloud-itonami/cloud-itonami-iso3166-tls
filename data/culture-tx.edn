@@ -1,0 +1,13 @@
+;; data/culture-tx.edn — DataScript tx-data derived from src/culture/facts.cljc
+;; `culture.facts/catalog` (ADR-2607171400 addendum 2, Wave 1 country-level).
+;; Same shape across every cloud-itonami-iso3166-* sibling. Do not hand-edit;
+;; regenerate from the catalog.
+
+[
+#:culture{:id "tls.dish.batar-daan", :name "Batar Da'an", :country "TLS", :kind :dish, :summary "Popular East Timorese dish of corn, mung beans, and pumpkin, per the Wikipedia article on the cuisine of Timor-Leste.", :url "https://en.wikipedia.org/wiki/Cuisine_of_Timor-Leste", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "tls.dish.budu", :name "Budu", :country "TLS", :kind :dish, :summary "East Timorese sauce of tomato, mint, lime, and Spanish onion, per the Wikipedia article on the cuisine of Timor-Leste.", :url "https://en.wikipedia.org/wiki/Cuisine_of_Timor-Leste", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "tls.dish.ikan-sabuko", :name "Ikan Sabuko", :country "TLS", :kind :dish, :summary "East Timorese dish of Spanish mackerel in tamarind marinade with basil and capsicum, per the Wikipedia article on the cuisine of Timor-Leste.", :url "https://en.wikipedia.org/wiki/Cuisine_of_Timor-Leste", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "tls.beverage.coffee", :name "Timor-Leste coffee", :country "TLS", :kind :beverage, :summary "Timor-Leste's largest non-oil export; the country is the largest single-source organic coffee producer globally, grown on volcanic soils at high tropical altitude.", :url "https://en.wikipedia.org/wiki/Coffee_industry_of_Timor-Leste", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "tls.craft.tais", :name "Tais", :country "TLS", :kind :craft, :summary "Traditional weaving created by the women of East Timor, used for ceremonial adornment and as a symbol of national and cultural identity.", :url "https://en.wikipedia.org/wiki/Tais", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+#:culture{:id "tls.heritage.cristo-rei-dili", :name "Cristo Rei of Dili", :country "TLS", :kind :heritage, :summary "27-metre-high statue of Jesus Christ at Cape Fatucama in Dili, one of Timor-Leste's primary tourist attractions and a symbol of national identity since independence in 2002.", :url "https://en.wikipedia.org/wiki/Cristo_Rei_of_Dili", :url-provenance :wikipedia-en, :retrieved-at "2026-07-17"}
+]
