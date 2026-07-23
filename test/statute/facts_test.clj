@@ -1,0 +1,29 @@
+(ns statute.facts-test
+  (:require [clojure.string :as str]
+            [clojure.test :refer [deftest is testing]]
+            [statute.facts :as facts]))
+
+(deftest tls-has-spec-basis
+  (let [sb (facts/spec-basis "TLS")]
+    (is (= 3 (count sb)))
+    (is (every? :statute/law-number sb))
+    (is (every? #(str/starts-with? (:statute/url %) "https://") sb))))
+
+(deftest unknown-jurisdiction-has-no-spec-basis
+  (is (nil? (facts/spec-basis "ATL")))
+  (is (nil? (facts/spec-basis "ZZZ"))))
+
+(deftest coverage-is-honest
+  (let [c (facts/coverage ["TLS" "IDN" "ATL"])]
+    (is (= 3 (:requested c)))
+    (is (= 1 (:covered c)))
+    (is (= ["ATL" "IDN"] (:missing-jurisdictions c)))))
+
+(deftest by-topic-filters
+  (is (= ["tls.lei-do-investimento-privado-2017"]
+         (mapv :statute/id (facts/by-topic "TLS" :investment))))
+  (is (= ["tls.lei-tributaria-2008"]
+         (mapv :statute/id (facts/by-topic "TLS" :tax))))
+  (testing "labor law is a disclosed research gap, not a fabricated entry"
+    (is (empty? (facts/by-topic "TLS" :labor))))
+  (is (empty? (facts/by-topic "ATL" :investment))))
