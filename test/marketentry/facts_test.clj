@@ -1,0 +1,53 @@
+(ns marketentry.facts-test
+  (:require [clojure.test :refer [deftest is testing]]
+            [marketentry.facts :as facts]))
+
+(deftest tls-has-spec-basis
+  (let [sb (facts/spec-basis "TLS")]
+    (is (some? sb))
+    (is (string? (:provenance sb)))
+    (is (seq (:required-evidence sb)))
+    (is (some? (facts/serve-registration-spec-basis "TLS")))
+    (is (some? (facts/local-works-procedure-spec-basis "TLS")))))
+
+(deftest unknown-jurisdiction-has-no-spec-basis
+  (is (nil? (facts/spec-basis "ATL")))
+  (is (nil? (facts/spec-basis "ZZZ"))))
+
+(deftest required-evidence-satisfied
+  (let [sb (facts/spec-basis "TLS")
+        all (:required-evidence sb)]
+    (is (true? (facts/required-evidence-satisfied? "TLS" all)))
+    (is (not (facts/required-evidence-satisfied? "TLS" (take 1 all))))
+    (is (nil? (facts/required-evidence-satisfied? "ATL" all)))))
+
+(deftest coverage-is-honest
+  (let [c (facts/coverage ["TLS" "USA" "ATL"])]
+    (is (= 3 (:requested c)))
+    (is (= 2 (:covered c)))
+    (is (= ["ATL"] (:missing-jurisdictions c)))))
+
+(deftest comparative-jurisdictions-are-not-cross-contaminated
+  ;; USA and SGP are legitimate comparative-jurisdiction entries in the
+  ;; same catalog (same pattern as sibling actors' reference entries) --
+  ;; each must carry its OWN jurisdiction's own legal basis, not another
+  ;; jurisdiction's.
+  (testing "Singapore cites its own Government Procurement Act, not the US FAR"
+    (is (= "GPA" (:legal-basis (facts/spec-basis "SGP")))))
+  (testing "United States cites its own FAR"
+    (is (= "FAR" (:legal-basis (facts/spec-basis "USA")))))
+  (testing "Singapore and the United States don't share a legal-basis value"
+    (is (not= (:legal-basis (facts/spec-basis "SGP"))
+              (:legal-basis (facts/spec-basis "USA"))))))
+
+(deftest serve-registration-spec-basis-grounded
+  (let [sb (facts/serve-registration-spec-basis "TLS")]
+    (is (some? sb))
+    (is (re-find #"Decreto-Lei n\.º 16/2017" (:serve-registration-legal-basis sb)))
+    (is (nil? (facts/serve-registration-spec-basis "ATL")))))
+
+(deftest local-works-procedure-spec-basis-grounded
+  (let [sb (facts/local-works-procedure-spec-basis "TLS")]
+    (is (some? sb))
+    (is (re-find #"Decreto-Lei n\.º 2/2010" (:local-works-procedure-legal-basis sb)))
+    (is (nil? (facts/local-works-procedure-spec-basis "ATL")))))

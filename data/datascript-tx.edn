@@ -1,0 +1,35 @@
+;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljc
+;; `statute.facts/catalog` (ADR-2607141700 Wave 0). Same shape as sibling files.
+;; Labor law is a deliberately DISCLOSED gap, not a hand-edit oversight -- see
+;; src/statute/facts.cljc's namespace docstring.
+
+[#:statute{:id "tls.lei-das-sociedades-comerciais-2017"
+           :title "Nova Lei das Sociedades Comerciais (Companies Law)"
+           :jurisdiction "TLS"
+           :kind :law
+           :law-number "Lei n.º 10/2017, de 17 de Maio (own text, Jornal da República Série I, N.° 19, own preamble: 'revoga integralmente a Lei n.º 4/2004, sobre Sociedades Comerciais')"
+           :url "https://serve.gov.tl/wp-content/uploads/2022/08/SERIE_I_NO_19_LEI-10_2017-LEI-DAS-SOCIDADES-COMERCIAIS.pdf"
+           :url-provenance :official-serve-gov-tl
+           :enacted-date "2017-05-17"
+           :retrieved-at "2026-07-23"
+           :topic [:corporate-governance :incorporation]}
+ #:statute{:id "tls.lei-do-investimento-privado-2017"
+           :title "Lei do Investimento Privado (Private Investment Law)"
+           :jurisdiction "TLS"
+           :kind :law
+           :law-number "Lei n.º 15/2017, de 23 de Agosto"
+           :url "https://timor-leste.gov.tl/wp-content/uploads/2021/03/SERIE_I_NO_331.pdf"
+           :url-provenance :official-timor-leste-gov-tl
+           :enacted-date "2017-08-23"
+           :retrieved-at "2026-07-23"
+           :topic [:investment]}
+ #:statute{:id "tls.lei-tributaria-2008"
+           :title "Lei Tributária (Tax Law)"
+           :jurisdiction "TLS"
+           :kind :law
+           :law-number "Lei n.º 8/2008 (own text, Jornal da República Série I, N.° 26, SUMÁRIO cover-page date 30 de Junho de 2008; the law's own printed in-document header says 30 de Julho -- both dates quoted honestly, see statute.facts namespace docstring)"
+           :url "https://timor-leste.gov.tl/wp-content/uploads/2010/03/Lei_2008_8_Lei_Tributaria_1.pdf"
+           :url-provenance :official-timor-leste-gov-tl
+           :enacted-date "2008-06-30"
+           :retrieved-at "2026-07-23"
+           :topic [:tax]}]
