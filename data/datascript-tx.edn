@@ -1,7 +1,7 @@
-;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljc
+;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljk
 ;; `statute.facts/catalog` (ADR-2607141700 Wave 0). Same shape as sibling files.
 ;; Labor law is a deliberately DISCLOSED gap, not a hand-edit oversight -- see
-;; src/statute/facts.cljc's namespace docstring.
+;; src/statute/facts.cljk's namespace docstring.
 
 [#:statute{:id "tls.lei-das-sociedades-comerciais-2017"
            :title "Nova Lei das Sociedades Comerciais (Companies Law)"

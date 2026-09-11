@@ -7,4 +7,4 @@ substantive check `serve-registration-missing` (Decreto-Lei n.º
 
 Statute catalog: Lei n.º 10/2017 (Companies), Lei n.º 15/2017
 (Investment), Lei n.º 8/2008 (Tax). Labor law is a disclosed,
-unresolved research gap — see `src/statute/facts.cljc`.
+unresolved research gap — see `src/statute/facts.cljk`.
