@@ -10,7 +10,7 @@ track for contracts up to $250,000, gated on a value ceiling and a
 fraud/corruption debarment bar). **Seven** governor checks total.
 
 ```
-clojure -M:dev:test
+kbb -M:dev:test
 ```
 
 ## Market-entry / statute catalogs
