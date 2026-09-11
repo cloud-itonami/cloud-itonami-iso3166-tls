@@ -34,7 +34,7 @@
 
 This actor's `statute.facts` catalog does NOT yet include a labor-law
 citation for Timor-Leste — this is a disclosed research gap (see
-`src/statute/facts.cljc`'s namespace docstring), not an oversight.
+`src/statute/facts.cljk`'s namespace docstring), not an oversight.
 Operators advising on labor-law compliance specifically should route
 to Timor-Leste-licensed counsel until a verified primary-source
 citation can be added.

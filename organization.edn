@@ -6,7 +6,7 @@
   :name-local "Timor-Leste"
   :wikidata "Q574"
   :head-role "Secretariado Técnico do Aprovisionamento / SERVE, I.P."
-  :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored. No single named procurement regulator with its own acronym/domain was independently confirmed for Timor-Leste this session (unlike e.g. Mozambique's UFSA) -- the Secretariado Técnico do Aprovisionamento (created by Decreto-Lei n.º 1/2010, under the Prime Minister's office) is the actual procurement-oversight structure found, and SERVE, I.P. (Decreto-Lei n.º 16/2017) is the confirmed exclusive commercial-registration authority; see src/marketentry/facts.cljc"
+  :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored. No single named procurement regulator with its own acronym/domain was independently confirmed for Timor-Leste this session (unlike e.g. Mozambique's UFSA) -- the Secretariado Técnico do Aprovisionamento (created by Decreto-Lei n.º 1/2010, under the Prime Minister's office) is the actual procurement-oversight structure found, and SERVE, I.P. (Decreto-Lei n.º 16/2017) is the confirmed exclusive commercial-registration authority; see src/marketentry/facts.cljk"
   :contact-page "https://www.wikidata.org/wiki/Q9310"
   :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
   :hq {:line-en "Dili" :country "tls" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q9310" :last-verified "2026-07-10" :sourcing "authoritative"}

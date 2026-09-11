@@ -39,7 +39,7 @@ paraphrased from training-data memory.
   enforce as a hard gate (a district-based preference is NOT modeled
   as a hard bar, because the law's own text frames it as a scoring
   preference, not an admissibility requirement).
-- `src/statute/facts.cljc` -- general-law catalog: Lei n.º 10/2017
+- `src/statute/facts.cljk` -- general-law catalog: Lei n.º 10/2017
   (Nova Lei das Sociedades Comerciais, which this iteration confirmed
   directly from its own primary text revokes the prior Lei n.º
   4/2004), Lei n.º 15/2017 (Lei do Investimento Privado), and Lei n.º
@@ -57,7 +57,7 @@ Every citation is `curl`/`pdftotext`-verified against an official
 `.gov.tl` source (`timor-leste.gov.tl`, `serve.gov.tl`) -- every
 downloaded PDF's own Jornal da República masthead (Série/N.°/date) is
 visible in the extracted text, confirming these are the government's
-own primary documents. See `src/marketentry/facts.cljc`'s namespace
+own primary documents. See `src/marketentry/facts.cljk`'s namespace
 docstring for the full research trail, including facts this iteration
 could NOT verify (the national e-procurement portal's own content,
 behind a JS-rendered page this session; a single-day date discrepancy
@@ -75,7 +75,7 @@ Alongside the market-entry / statute catalogs, this repo carries a
 `com-junkawasaki/root`) — national dishes, protected products, beverages,
 crafts, festivals and heritage sites for Timor-Leste:
 
-- `src/culture/facts.cljc` — the catalog, source of truth (keyed by
+- `src/culture/facts.cljk` — the catalog, source of truth (keyed by
   uppercase ISO3, mirroring `statute.facts`).
 - `schema/culture.edn` — DataScript schema.
 - `data/culture-tx.edn` — derived DataScript tx-data (regenerated from
