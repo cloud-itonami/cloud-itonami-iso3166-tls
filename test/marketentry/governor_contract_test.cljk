@@ -15,7 +15,7 @@
   for the full discussion of which of that article's six admissibility
   conditions this governor does, and deliberately does not, enforce as
   a hard gate."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [langgraph.graph :as g]
             [marketentry.store :as store]
             [marketentry.operation :as op]))
